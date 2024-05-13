@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+const user = {
+  name: 'Saùl Flores',
+  imageUrl: 'https://elcomercio.pe/resizer/8lRiRKQD83X-lVYsvhaWsnTHoMg=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/GI4DANJNGA3C2MRUKQYDAORSHA.jpg',
+  imageSize: 300,
+};
 
-function App() {
+export default function Profile() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>{user.name}</h1>
+      <img
+        className="avatar"
+        src={user.imageUrl}
+        alt={'Photo of ' + user.name}
+        style={{
+          width: user.imageSize,
+          height: user.imageSize
+        }}
+      />
+    </>
   );
 }
 
-export default App;
+
+
